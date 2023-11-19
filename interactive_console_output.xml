@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231118 08:55:07.533" rpa="false" schemaversion="4">
+<suite id="s1" name="Robot Interactive Console" source="c:\Users\nattapat.p\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
+<test id="s1-t1" name="Default Task/Test" line="5">
+<kw name="Interpreter Main Loop" library="MainLoop">
+<kw name="Wait Until Page Contains Element">
+<arg>xpath=//input[@cid='t1']</arg>
+<arg>timeout=30s</arg>
+<msg timestamp="20231118 08:55:08.532" level="FAIL">No keyword with name 'Wait Until Page Contains Element' found.</msg>
+<status status="FAIL" starttime="20231118 08:55:08.531" endtime="20231118 08:55:08.532"/>
+</kw>
+<kw name="Clear Element Text">
+<arg>xpath=//input[@cid='t1']</arg>
+<status status="NOT RUN" starttime="20231118 08:55:08.532" endtime="20231118 08:55:08.532"/>
+</kw>
+<kw name="Clear Element Text">
+<arg>xpath=//input[@cid='t2']</arg>
+<status status="NOT RUN" starttime="20231118 08:55:08.533" endtime="20231118 08:55:08.533"/>
+</kw>
+<kw name="Input Text">
+<arg>xpath=//input[@cid='t1']</arg>
+<arg>9876543210</arg>
+<status status="NOT RUN" starttime="20231118 08:55:08.534" endtime="20231118 08:55:08.534"/>
+</kw>
+<kw name="Input Text">
+<arg>xpath=//input[@cid='t2']</arg>
+<arg>5000</arg>
+<status status="NOT RUN" starttime="20231118 08:55:08.535" endtime="20231118 08:55:08.535"/>
+</kw>
+<kw name="Click Button">
+<arg>xpath=//button[@cid='tc']</arg>
+<status status="NOT RUN" starttime="20231118 08:55:08.536" endtime="20231118 08:55:08.536"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231118 08:55:08.536" endtime="20231118 08:55:08.536"/>
+</kw>
+<kw name="Wait Until Element Is Visible">
+<arg>xpath=//label[@cid='transfer-error-mes']</arg>
+<status status="NOT RUN" starttime="20231118 08:55:08.537" endtime="20231118 08:55:08.537"/>
+</kw>
+<kw name="Get Text">
+<var>${error_message}</var>
+<arg>xpath=//label[@cid='transfer-error-mes']</arg>
+<status status="NOT RUN" starttime="20231118 08:55:08.538" endtime="20231118 08:55:08.538"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_message}</arg>
+<arg>Not found your target account Id</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="NOT RUN" starttime="20231118 08:55:08.538" endtime="20231118 08:55:08.538"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231118 08:55:08.538" endtime="20231118 08:55:08.538"/>
+</kw>
+<status status="PASS" starttime="20231118 08:55:07.551" endtime="20231118 08:55:13.551"/>
+</kw>
+<status status="PASS" starttime="20231118 08:55:07.551" endtime="20231118 08:55:13.552"/>
+</test>
+<status status="PASS" starttime="20231118 08:55:07.534" endtime="20231118 08:55:13.552"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Robot Interactive Console">Robot Interactive Console</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

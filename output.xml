@@ -1,0 +1,2198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231119 15:41:17.427" rpa="false" schemaversion="4">
+<suite id="s1" name="6 Cu Bank Bill Payment Module" source="d:\CU_Homework\2110724\CU_Bank_Robot_Framework\6_cu_bank_bill_payment_module.robot">
+<test id="s1-t1" name="Open CU Bank With Chrome" line="15">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>http://localhost:3000</arg>
+<arg>browser=chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231119 15:41:17.605" level="INFO">Opening browser 'chrome' to base url 'http://localhost:3000'.</msg>
+<status status="PASS" starttime="20231119 15:41:17.604" endtime="20231119 15:41:20.185"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231119 15:41:20.186" endtime="20231119 15:41:20.306"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:22.308" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:20.307" endtime="20231119 15:41:22.308"/>
+</kw>
+<tag>bill_pay_1</tag>
+<status status="PASS" starttime="20231119 15:41:17.603" endtime="20231119 15:41:22.310"/>
+</test>
+<test id="s1-t2" name="Try Login With Correct Account ID and Correct Password" line="21">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='lc']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:41:22.314" endtime="20231119 15:41:22.328"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id='accountId']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:41:22.328" endtime="20231119 15:41:22.369"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id='password']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:41:22.370" endtime="20231119 15:41:22.398"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id='accountId']</arg>
+<arg>1234567890</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:22.400" level="INFO">Typing text '1234567890' into text field 'xpath=//input[@id='accountId']'.</msg>
+<status status="PASS" starttime="20231119 15:41:22.399" endtime="20231119 15:41:22.474"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:24.475" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:22.474" endtime="20231119 15:41:24.475"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@id='password']</arg>
+<arg>1234</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:24.478" level="INFO">Typing text '1234' into text field 'xpath=//input[@id='password']'.</msg>
+<status status="PASS" starttime="20231119 15:41:24.477" endtime="20231119 15:41:24.535"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:26.536" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:24.536" endtime="20231119 15:41:26.536"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='lc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:26.539" level="INFO">Clicking button 'xpath=//button[@cid='lc']'.</msg>
+<status status="PASS" starttime="20231119 15:41:26.538" endtime="20231119 15:41:26.593"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:28.596" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:26.594" endtime="20231119 15:41:28.596"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:41:28.597" endtime="20231119 15:41:28.624"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:30.626" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:28.624" endtime="20231119 15:41:30.627"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div/div[3]/div[1]/h2</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:41:30.627" endtime="20231119 15:41:30.677"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>//*[@id="root"]/div/div/div/div[3]/div[1]/h2</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20231119 15:41:30.703" level="INFO">Element '//*[@id="root"]/div/div/div/div[3]/div[1]/h2' is displayed.</msg>
+<status status="PASS" starttime="20231119 15:41:30.678" endtime="20231119 15:41:30.703"/>
+</kw>
+<tag>bill_pay_2</tag>
+<status status="PASS" starttime="20231119 15:41:22.313" endtime="20231119 15:41:30.704"/>
+</test>
+<test id="s1-t3" name="Set Pre-Condition: Get Balance and Set Balance = 0" line="43">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:41:30.706" endtime="20231119 15:41:30.714"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:41:30.714" endtime="20231119 15:41:30.742"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:41:30.744" endtime="20231119 15:41:30.766"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:30.791" level="INFO">${initial_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:41:30.766" endtime="20231119 15:41:30.791"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:41:30.792" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:41:30.792" endtime="20231119 15:41:30.792"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${initial_integer}</var>
+<arg>${initial_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:41:30.794" level="INFO">${initial_integer} = 0</msg>
+<status status="PASS" starttime="20231119 15:41:30.793" endtime="20231119 15:41:30.794"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${initial_integer} &gt; 0</arg>
+<arg>Input Text</arg>
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>${initial_integer}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231119 15:41:30.794" endtime="20231119 15:41:30.795"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:32.797" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:30.795" endtime="20231119 15:41:32.797"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${initial_integer} &gt; 0</arg>
+<arg>Click Button</arg>
+<arg>xpath=//button[@cid='wc']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231119 15:41:32.799" endtime="20231119 15:41:32.799"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:37.801" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:32.801" endtime="20231119 15:41:37.801"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:41:37.802" endtime="20231119 15:41:37.817"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:41:37.817" endtime="20231119 15:41:37.826"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:41:37.826" endtime="20231119 15:41:37.840"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:37.854" level="INFO">${new_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:41:37.840" endtime="20231119 15:41:37.854"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:41:37.855" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:41:37.854" endtime="20231119 15:41:37.855"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${new_text}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231119 15:41:37.855" endtime="20231119 15:41:37.856"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:39.856" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:37.856" endtime="20231119 15:41:39.856"/>
+</kw>
+<tag>bill_pay_3</tag>
+<status status="PASS" starttime="20231119 15:41:30.705" endtime="20231119 15:41:39.857"/>
+</test>
+<test id="s1-t4" name="Set Pre-Condition: Deposit 1000000" line="82">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:41:39.860" endtime="20231119 15:41:39.873"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:41:39.873" endtime="20231119 15:41:39.902"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:41:39.902" endtime="20231119 15:41:39.920"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:39.964" level="INFO">${initial_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:41:39.921" endtime="20231119 15:41:39.964"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:41:39.966" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:41:39.965" endtime="20231119 15:41:39.966"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>${initial_maximum_balance}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:39.967" level="INFO">Typing text '1000000' into text field 'xpath=//input[@cid='d1']'.</msg>
+<status status="PASS" starttime="20231119 15:41:39.967" endtime="20231119 15:41:40.038"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='dc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:40.040" level="INFO">Clicking button 'xpath=//button[@cid='dc']'.</msg>
+<status status="PASS" starttime="20231119 15:41:40.039" endtime="20231119 15:41:40.121"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:45.122" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:40.122" endtime="20231119 15:41:45.122"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:41:45.124" endtime="20231119 15:41:45.137"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:41:45.138" endtime="20231119 15:41:45.147"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:41:45.147" endtime="20231119 15:41:45.167"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:45.193" level="INFO">${new_text} = 1000000</msg>
+<status status="PASS" starttime="20231119 15:41:45.167" endtime="20231119 15:41:45.193"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:41:45.194" level="INFO">1000000</msg>
+<status status="PASS" starttime="20231119 15:41:45.194" endtime="20231119 15:41:45.194"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:47.195" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:45.194" endtime="20231119 15:41:47.195"/>
+</kw>
+<kw name="Should Not Be Equal As Strings" library="BuiltIn">
+<arg>${new_text}</arg>
+<arg>${initial_text}</arg>
+<doc>Fails if objects are equal after converting them to strings.</doc>
+<status status="PASS" starttime="20231119 15:41:47.197" endtime="20231119 15:41:47.198"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:49.200" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:47.199" endtime="20231119 15:41:49.200"/>
+</kw>
+<tag>bill_pay_4</tag>
+<status status="PASS" starttime="20231119 15:41:39.859" endtime="20231119 15:41:49.202"/>
+</test>
+<test id="s1-t5" name="ทดสอบการ login ที่ผ่าน และชำระค่าน้ำที่ไม่ผ่าน (Try Bill Payment without selection)" line="110">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:41:49.208" endtime="20231119 15:41:49.506"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:51.509" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:49.508" endtime="20231119 15:41:51.509"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:41:51.510" endtime="20231119 15:41:51.523"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:41:51.523" endtime="20231119 15:41:51.551"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:53.554" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:51.552" endtime="20231119 15:41:53.554"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:41:53.555" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:41:53.554" endtime="20231119 15:41:53.609"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:55.612" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:53.609" endtime="20231119 15:41:55.612"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:41:55.612" endtime="20231119 15:41:55.633"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${error_message}</var>
+<arg>return document.querySelector('input[cid="b1"]:invalid').validationMessage</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231119 15:41:55.636" level="INFO">Executing JavaScript:
+return document.querySelector('input[cid="b1"]:invalid').validationMessage
+Without any arguments.</msg>
+<msg timestamp="20231119 15:41:55.643" level="INFO">${error_message} = Please select one of these options.</msg>
+<status status="PASS" starttime="20231119 15:41:55.634" endtime="20231119 15:41:55.643"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_message}</arg>
+<arg>Please select one of these options.</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231119 15:41:55.644" endtime="20231119 15:41:55.644"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:57.645" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:55.645" endtime="20231119 15:41:57.645"/>
+</kw>
+<tag>bill_pay_5</tag>
+<status status="PASS" starttime="20231119 15:41:49.205" endtime="20231119 15:41:57.646"/>
+</test>
+<test id="s1-t6" name="ทดสอบการ login ที่ผ่าน และชำระค่าน้ำที่ไม่ผ่าน(Try Bill Payment with selection water charge without amount)" line="131">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:41:57.649" endtime="20231119 15:41:57.942"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:41:59.943" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:57.943" endtime="20231119 15:41:59.943"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:41:59.945" endtime="20231119 15:41:59.958"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:41:59.959" endtime="20231119 15:41:59.986"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:01.987" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:41:59.987" endtime="20231119 15:42:01.987"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:01.988" endtime="20231119 15:42:02.007"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:02.008" level="INFO">Clicking element 'xpath=//input[@cid='b1']'.</msg>
+<status status="PASS" starttime="20231119 15:42:02.007" endtime="20231119 15:42:02.080"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:04.082" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:02.081" endtime="20231119 15:42:04.082"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:04.085" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:42:04.084" endtime="20231119 15:42:04.138"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:06.140" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:04.139" endtime="20231119 15:42:06.140"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:06.141" endtime="20231119 15:42:06.164"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${error_message}</var>
+<arg>return document.querySelector('input[cid="b4"]:invalid').validationMessage</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231119 15:42:06.168" level="INFO">Executing JavaScript:
+return document.querySelector('input[cid="b4"]:invalid').validationMessage
+Without any arguments.</msg>
+<msg timestamp="20231119 15:42:06.173" level="INFO">${error_message} = Please fill out this field.</msg>
+<status status="PASS" starttime="20231119 15:42:06.165" endtime="20231119 15:42:06.173"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_message}</arg>
+<arg>Please fill out this field.</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231119 15:42:06.174" endtime="20231119 15:42:06.174"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:08.176" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:06.175" endtime="20231119 15:42:08.176"/>
+</kw>
+<tag>bill_pay_6</tag>
+<status status="PASS" starttime="20231119 15:41:57.647" endtime="20231119 15:42:08.177"/>
+</test>
+<test id="s1-t7" name="ทดสอบการ login ที่ผ่าน และชำระค่าน้ำที่ไม่ผ่าน (Try Bill Payment with selection water charge with incorrect format amount)" line="158">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:42:08.181" endtime="20231119 15:42:08.477"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:10.479" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:08.478" endtime="20231119 15:42:10.479"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:42:10.481" endtime="20231119 15:42:10.493"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:42:10.493" endtime="20231119 15:42:10.520"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:12.520" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:10.520" endtime="20231119 15:42:12.520"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:12.521" endtime="20231119 15:42:12.539"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:12.540" level="INFO">Clicking element 'xpath=//input[@cid='b1']'.</msg>
+<status status="PASS" starttime="20231119 15:42:12.539" endtime="20231119 15:42:12.572"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:14.573" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:12.573" endtime="20231119 15:42:14.573"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>E2345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:14.576" level="INFO">Typing text 'E2345' into text field 'xpath=//input[@cid='b4']'.</msg>
+<status status="PASS" starttime="20231119 15:42:14.575" endtime="20231119 15:42:14.668"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:14.669" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:42:14.669" endtime="20231119 15:42:14.717"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:16.719" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:14.718" endtime="20231119 15:42:16.719"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:16.720" endtime="20231119 15:42:16.742"/>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<var>${error_message}</var>
+<arg>return document.querySelector('input[cid="b4"]:invalid').validationMessage</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20231119 15:42:16.743" level="INFO">Executing JavaScript:
+return document.querySelector('input[cid="b4"]:invalid').validationMessage
+Without any arguments.</msg>
+<msg timestamp="20231119 15:42:16.752" level="INFO">${error_message} = Please enter a number.</msg>
+<status status="PASS" starttime="20231119 15:42:16.743" endtime="20231119 15:42:16.752"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_message}</arg>
+<arg>Please enter a number.</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231119 15:42:16.753" endtime="20231119 15:42:16.753"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:18.755" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:16.753" endtime="20231119 15:42:18.755"/>
+</kw>
+<tag>bill_pay_7</tag>
+<status status="PASS" starttime="20231119 15:42:08.179" endtime="20231119 15:42:18.756"/>
+</test>
+<test id="s1-t8" name="ทดสอบการ login ที่ผ่าน และชำระค่าน้ำที่ไม่ผ่าน (Try Bill Payment with selection water charge with 0)" line="185">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:42:18.760" endtime="20231119 15:42:19.058"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:21.062" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:19.059" endtime="20231119 15:42:21.062"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:42:21.062" endtime="20231119 15:42:21.072"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:42:21.073" endtime="20231119 15:42:21.098"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:23.099" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:21.098" endtime="20231119 15:42:23.099"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:23.100" endtime="20231119 15:42:23.116"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:23.118" level="INFO">Clicking element 'xpath=//input[@cid='b1']'.</msg>
+<status status="PASS" starttime="20231119 15:42:23.117" endtime="20231119 15:42:23.156"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:25.158" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:23.157" endtime="20231119 15:42:25.158"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>0</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:25.161" level="INFO">Typing text '0' into text field 'xpath=//input[@cid='b4']'.</msg>
+<status status="PASS" starttime="20231119 15:42:25.160" endtime="20231119 15:42:25.221"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:25.223" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:42:25.222" endtime="20231119 15:42:25.302"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:27.303" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:25.303" endtime="20231119 15:42:27.303"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//label[@cid='billpayment-error-mes']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:27.305" endtime="20231119 15:42:27.329"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${error_message}</var>
+<arg>xpath=//label[@cid='billpayment-error-mes']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:27.344" level="INFO">${error_message} = Please put only number</msg>
+<status status="PASS" starttime="20231119 15:42:27.330" endtime="20231119 15:42:27.344"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_message}</arg>
+<arg>Please put only number</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231119 15:42:27.345" endtime="20231119 15:42:27.345"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:29.346" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:27.345" endtime="20231119 15:42:29.346"/>
+</kw>
+<tag>bill_pay_8</tag>
+<status status="PASS" starttime="20231119 15:42:18.757" endtime="20231119 15:42:29.348"/>
+</test>
+<test id="s1-t9" name="ทดสอบการ login ที่ผ่าน และชำระค่าน้ำที่ไม่ผ่าน (Try Bill Payment with selection water charge with -1)" line="209">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:42:29.359" endtime="20231119 15:42:29.667"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:31.669" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:29.669" endtime="20231119 15:42:31.669"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:42:31.671" endtime="20231119 15:42:31.684"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:42:31.685" endtime="20231119 15:42:31.714"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:33.716" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:31.714" endtime="20231119 15:42:33.716"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:33.717" endtime="20231119 15:42:33.734"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:33.735" level="INFO">Clicking element 'xpath=//input[@cid='b1']'.</msg>
+<status status="PASS" starttime="20231119 15:42:33.735" endtime="20231119 15:42:33.765"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:35.767" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:33.766" endtime="20231119 15:42:35.767"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>-1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:35.768" level="INFO">Typing text '-1' into text field 'xpath=//input[@cid='b4']'.</msg>
+<status status="PASS" starttime="20231119 15:42:35.768" endtime="20231119 15:42:35.825"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:35.826" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:42:35.826" endtime="20231119 15:42:35.894"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:37.895" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:35.894" endtime="20231119 15:42:37.895"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//label[@cid='billpayment-error-mes']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:37.896" endtime="20231119 15:42:37.915"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${error_message}</var>
+<arg>xpath=//label[@cid='billpayment-error-mes']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:37.929" level="INFO">${error_message} = Please put only number</msg>
+<status status="PASS" starttime="20231119 15:42:37.915" endtime="20231119 15:42:37.929"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_message}</arg>
+<arg>Please put only number</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231119 15:42:37.929" endtime="20231119 15:42:37.930"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:39.930" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:37.930" endtime="20231119 15:42:39.930"/>
+</kw>
+<tag>bill_pay_9</tag>
+<status status="PASS" starttime="20231119 15:42:29.350" endtime="20231119 15:42:39.932"/>
+</test>
+<test id="s1-t10" name="ทดสอบการ login ที่ผ่าน และชำระค่าน้ำที่ไม่ผ่าน (Try Bill Payment with selection water charge with 1000001)" line="233">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:42:39.938" endtime="20231119 15:42:40.227"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:42.229" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:40.228" endtime="20231119 15:42:42.229"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:42:42.230" endtime="20231119 15:42:42.247"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:42.262" level="INFO">${initial_text} = 1000000</msg>
+<status status="PASS" starttime="20231119 15:42:42.248" endtime="20231119 15:42:42.262"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:42:42.263" level="INFO">1000000</msg>
+<status status="PASS" starttime="20231119 15:42:42.263" endtime="20231119 15:42:42.263"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:42:42.264" endtime="20231119 15:42:42.542"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:44.545" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:42.544" endtime="20231119 15:42:44.545"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:42:44.547" endtime="20231119 15:42:44.560"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:42:44.560" endtime="20231119 15:42:44.588"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:46.590" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:44.589" endtime="20231119 15:42:46.590"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:46.592" endtime="20231119 15:42:46.610"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:46.611" level="INFO">Clicking element 'xpath=//input[@cid='b1']'.</msg>
+<status status="PASS" starttime="20231119 15:42:46.610" endtime="20231119 15:42:46.643"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:48.644" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:46.644" endtime="20231119 15:42:48.644"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>1000001</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:48.647" level="INFO">Typing text '1000001' into text field 'xpath=//input[@cid='b4']'.</msg>
+<status status="PASS" starttime="20231119 15:42:48.646" endtime="20231119 15:42:48.708"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:48.709" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:42:48.709" endtime="20231119 15:42:48.781"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:50.783" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:48.782" endtime="20231119 15:42:50.783"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//label[@cid='billpayment-error-mes']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:50.785" endtime="20231119 15:42:50.806"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${error_message}</var>
+<arg>xpath=//label[@cid='billpayment-error-mes']</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:50.819" level="INFO">${error_message} = your balance isn't not enough</msg>
+<status status="PASS" starttime="20231119 15:42:50.806" endtime="20231119 15:42:50.819"/>
+</kw>
+<kw name="Should Contain" library="BuiltIn">
+<arg>${error_message}</arg>
+<arg>your balance isn't not enough</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" starttime="20231119 15:42:50.819" endtime="20231119 15:42:50.820"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:52.821" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:50.820" endtime="20231119 15:42:52.821"/>
+</kw>
+<tag>bill_pay_10</tag>
+<status status="PASS" starttime="20231119 15:42:39.935" endtime="20231119 15:42:52.823"/>
+</test>
+<test id="s1-t11" name="ทดสอบการ login ที่ผ่าน และชำระค่าน้ำที่ผ่าน (Try Bill Payment with selection water charge with 1)" line="266">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:42:52.827" endtime="20231119 15:42:53.099"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:55.101" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:53.100" endtime="20231119 15:42:55.101"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:42:55.102" endtime="20231119 15:42:55.112"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:55.131" level="INFO">${initial_text} = 1000000</msg>
+<status status="PASS" starttime="20231119 15:42:55.113" endtime="20231119 15:42:55.132"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:42:55.132" level="INFO">1000000</msg>
+<status status="PASS" starttime="20231119 15:42:55.132" endtime="20231119 15:42:55.133"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:42:55.133" endtime="20231119 15:42:55.401"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:57.403" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:55.402" endtime="20231119 15:42:57.403"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:42:57.403" endtime="20231119 15:42:57.413"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:42:57.414" endtime="20231119 15:42:57.441"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:42:59.443" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:57.442" endtime="20231119 15:42:59.443"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:42:59.443" endtime="20231119 15:42:59.459"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:42:59.460" level="INFO">Clicking element 'xpath=//input[@cid='b1']'.</msg>
+<status status="PASS" starttime="20231119 15:42:59.459" endtime="20231119 15:42:59.493"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:01.495" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:42:59.494" endtime="20231119 15:43:01.496"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:01.498" level="INFO">Typing text '1' into text field 'xpath=//input[@cid='b4']'.</msg>
+<status status="PASS" starttime="20231119 15:43:01.497" endtime="20231119 15:43:01.560"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:01.561" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:43:01.561" endtime="20231119 15:43:01.685"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:06.687" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:01.687" endtime="20231119 15:43:06.687"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:43:06.688" endtime="20231119 15:43:06.965"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:06.967" endtime="20231119 15:43:06.980"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:43:06.980" endtime="20231119 15:43:06.994"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:07.009" level="INFO">${new_text} = 999999</msg>
+<status status="PASS" starttime="20231119 15:43:06.995" endtime="20231119 15:43:07.009"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:07.010" level="INFO">999999</msg>
+<status status="PASS" starttime="20231119 15:43:07.010" endtime="20231119 15:43:07.010"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:09.012" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:07.011" endtime="20231119 15:43:09.012"/>
+</kw>
+<kw name="Should Not Be Equal As Strings" library="BuiltIn">
+<arg>${new_text}</arg>
+<arg>${initial_text}</arg>
+<doc>Fails if objects are equal after converting them to strings.</doc>
+<status status="PASS" starttime="20231119 15:43:09.014" endtime="20231119 15:43:09.014"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:11.016" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:09.015" endtime="20231119 15:43:11.016"/>
+</kw>
+<tag>bill_pay_11</tag>
+<status status="PASS" starttime="20231119 15:42:52.825" endtime="20231119 15:43:11.018"/>
+</test>
+<test id="s1-t12" name="Set Pre-Condition: Get Balance and Set Balance = 0" line="306">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:11.023" endtime="20231119 15:43:11.036"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:43:11.037" endtime="20231119 15:43:11.067"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:11.068" endtime="20231119 15:43:11.079"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:43:11.080" endtime="20231119 15:43:11.095"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:11.109" level="INFO">${initial_text} = 999999</msg>
+<status status="PASS" starttime="20231119 15:43:11.096" endtime="20231119 15:43:11.109"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:11.110" level="INFO">999999</msg>
+<status status="PASS" starttime="20231119 15:43:11.110" endtime="20231119 15:43:11.110"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${initial_integer}</var>
+<arg>${initial_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:43:11.111" level="INFO">${initial_integer} = 999999</msg>
+<status status="PASS" starttime="20231119 15:43:11.111" endtime="20231119 15:43:11.111"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${initial_integer} &gt; 0</arg>
+<arg>Input Text</arg>
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>${initial_integer}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>${initial_integer}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:11.113" level="INFO">Typing text '999999' into text field 'xpath=//input[@cid='w1']'.</msg>
+<status status="PASS" starttime="20231119 15:43:11.112" endtime="20231119 15:43:11.170"/>
+</kw>
+<status status="PASS" starttime="20231119 15:43:11.112" endtime="20231119 15:43:11.170"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:13.171" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:11.171" endtime="20231119 15:43:13.171"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${initial_integer} &gt; 0</arg>
+<arg>Click Button</arg>
+<arg>xpath=//button[@cid='wc']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='wc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:13.175" level="INFO">Clicking button 'xpath=//button[@cid='wc']'.</msg>
+<status status="PASS" starttime="20231119 15:43:13.174" endtime="20231119 15:43:13.268"/>
+</kw>
+<status status="PASS" starttime="20231119 15:43:13.173" endtime="20231119 15:43:13.268"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:18.272" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:13.269" endtime="20231119 15:43:18.272"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:18.274" endtime="20231119 15:43:18.286"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:18.286" endtime="20231119 15:43:18.295"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:43:18.295" endtime="20231119 15:43:18.342"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:18.359" level="INFO">${new_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:43:18.343" endtime="20231119 15:43:18.359"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:18.360" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:43:18.359" endtime="20231119 15:43:18.360"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:20.361" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:18.360" endtime="20231119 15:43:20.361"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${new_text}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231119 15:43:20.362" endtime="20231119 15:43:20.362"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:22.364" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:20.363" endtime="20231119 15:43:22.364"/>
+</kw>
+<status status="PASS" starttime="20231119 15:43:11.022" endtime="20231119 15:43:22.365"/>
+</test>
+<test id="s1-t13" name="ทดสอบการ login ที่ผ่าน และฝากเงินที่ผ่าน (Try Deposit With Max Bigint : 18446744073709551615)" line="343">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:22.368" endtime="20231119 15:43:22.380"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:43:22.381" endtime="20231119 15:43:22.415"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:22.435" level="INFO">${initial_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:43:22.416" endtime="20231119 15:43:22.435"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:22.436" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:43:22.435" endtime="20231119 15:43:22.436"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>18446744073709551615</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:22.437" level="INFO">Typing text '18446744073709551615' into text field 'xpath=//input[@cid='d1']'.</msg>
+<status status="PASS" starttime="20231119 15:43:22.436" endtime="20231119 15:43:22.510"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='dc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:22.511" level="INFO">Clicking button 'xpath=//button[@cid='dc']'.</msg>
+<status status="PASS" starttime="20231119 15:43:22.511" endtime="20231119 15:43:22.621"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:27.624" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:22.622" endtime="20231119 15:43:27.624"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:27.626" endtime="20231119 15:43:27.639"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:27.640" endtime="20231119 15:43:27.647"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:43:27.647" endtime="20231119 15:43:27.663"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:27.677" level="INFO">${new_text} = 18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:43:27.663" endtime="20231119 15:43:27.677"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:27.677" level="INFO">18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:43:27.677" endtime="20231119 15:43:27.678"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:29.678" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:27.678" endtime="20231119 15:43:29.678"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:31.681" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:29.680" endtime="20231119 15:43:31.681"/>
+</kw>
+<status status="PASS" starttime="20231119 15:43:22.366" endtime="20231119 15:43:31.683"/>
+</test>
+<test id="s1-t14" name="ทดสอบการ login ที่ผ่าน และชำระค่าน้ำที่ผ่าน (Try Bill Payment with selection water charge with 18446744073709551615)" line="375">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:43:31.688" endtime="20231119 15:43:31.975"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:33.977" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:31.976" endtime="20231119 15:43:33.977"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:33.979" endtime="20231119 15:43:33.991"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:34.006" level="INFO">${initial_text} = 18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:43:33.992" endtime="20231119 15:43:34.006"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:34.007" level="INFO">18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:43:34.007" endtime="20231119 15:43:34.007"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:43:34.008" endtime="20231119 15:43:34.320"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:36.322" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:34.321" endtime="20231119 15:43:36.322"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:36.324" endtime="20231119 15:43:36.338"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:43:36.338" endtime="20231119 15:43:36.366"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:38.368" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:36.368" endtime="20231119 15:43:38.368"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:43:38.370" endtime="20231119 15:43:38.394"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:38.395" level="INFO">Clicking element 'xpath=//input[@cid='b1']'.</msg>
+<status status="PASS" starttime="20231119 15:43:38.394" endtime="20231119 15:43:38.467"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:40.468" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:38.468" endtime="20231119 15:43:40.468"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>18446744073709551615</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:40.471" level="INFO">Typing text '18446744073709551615' into text field 'xpath=//input[@cid='b4']'.</msg>
+<status status="PASS" starttime="20231119 15:43:40.470" endtime="20231119 15:43:40.544"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:40.545" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:43:40.545" endtime="20231119 15:43:40.627"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:45.629" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:40.628" endtime="20231119 15:43:45.629"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:43:45.631" endtime="20231119 15:43:45.927"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:45.929" endtime="20231119 15:43:45.940"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:43:45.940" endtime="20231119 15:43:45.956"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:45.971" level="INFO">${new_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:43:45.956" endtime="20231119 15:43:45.971"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:45.971" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:43:45.971" endtime="20231119 15:43:45.972"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${initial_text_integer}</var>
+<arg>${initial_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:43:45.972" level="INFO">${initial_text_integer} = 18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:43:45.972" endtime="20231119 15:43:45.973"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${expected_text_integer}</var>
+<arg>${initial_text_integer}-18446744073709551615</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231119 15:43:45.973" level="INFO">${expected_text_integer} = 385</msg>
+<status status="PASS" starttime="20231119 15:43:45.973" endtime="20231119 15:43:45.974"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${new_text_integer}</var>
+<arg>${new_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:43:45.974" level="INFO">${new_text_integer} = 0</msg>
+<status status="PASS" starttime="20231119 15:43:45.974" endtime="20231119 15:43:45.974"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${new_text_integer}</arg>
+<arg>${expected_text_integer}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20231119 15:43:45.975" level="FAIL">0 != 385</msg>
+<status status="FAIL" starttime="20231119 15:43:45.975" endtime="20231119 15:43:45.976"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231119 15:43:45.977" endtime="20231119 15:43:45.977"/>
+</kw>
+<tag>bill_pay_11</tag>
+<status status="FAIL" starttime="20231119 15:43:31.686" endtime="20231119 15:43:45.977">0 != 385</status>
+</test>
+<test id="s1-t15" name="Set Pre-Condition: Get Balance and Set Balance = 0" line="422">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:45.980" endtime="20231119 15:43:45.991"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:43:45.992" endtime="20231119 15:43:46.021"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:46.022" endtime="20231119 15:43:46.034"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:43:46.035" endtime="20231119 15:43:46.051"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:46.071" level="INFO">${initial_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:43:46.052" endtime="20231119 15:43:46.071"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:46.072" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:43:46.072" endtime="20231119 15:43:46.072"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${initial_integer}</var>
+<arg>${initial_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:43:46.073" level="INFO">${initial_integer} = 0</msg>
+<status status="PASS" starttime="20231119 15:43:46.073" endtime="20231119 15:43:46.073"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${initial_integer} &gt; 0</arg>
+<arg>Input Text</arg>
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>${initial_integer}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231119 15:43:46.074" endtime="20231119 15:43:46.074"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:48.076" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:46.074" endtime="20231119 15:43:48.076"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${initial_integer} &gt; 0</arg>
+<arg>Click Button</arg>
+<arg>xpath=//button[@cid='wc']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231119 15:43:48.077" endtime="20231119 15:43:48.078"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:53.079" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:48.078" endtime="20231119 15:43:53.079"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:53.080" endtime="20231119 15:43:53.091"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:53.092" endtime="20231119 15:43:53.100"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:43:53.101" endtime="20231119 15:43:53.116"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:53.130" level="INFO">${new_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:43:53.116" endtime="20231119 15:43:53.130"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:53.131" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:43:53.130" endtime="20231119 15:43:53.131"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:55.133" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:53.131" endtime="20231119 15:43:55.133"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${new_text}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231119 15:43:55.134" endtime="20231119 15:43:55.135"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:43:57.137" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:55.136" endtime="20231119 15:43:57.137"/>
+</kw>
+<status status="PASS" starttime="20231119 15:43:45.979" endtime="20231119 15:43:57.139"/>
+</test>
+<test id="s1-t16" name="ทดสอบการ login ที่ผ่าน และฝากเงินที่ผ่าน (Try Deposit With Max Bigint : 18446744073709551615)" line="459">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:43:57.144" endtime="20231119 15:43:57.157"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:43:57.158" endtime="20231119 15:43:57.185"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:57.204" level="INFO">${initial_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:43:57.185" endtime="20231119 15:43:57.204"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:43:57.205" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:43:57.204" endtime="20231119 15:43:57.205"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>18446744073709551615</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:57.206" level="INFO">Typing text '18446744073709551615' into text field 'xpath=//input[@cid='d1']'.</msg>
+<status status="PASS" starttime="20231119 15:43:57.205" endtime="20231119 15:43:57.270"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='dc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:43:57.271" level="INFO">Clicking button 'xpath=//button[@cid='dc']'.</msg>
+<status status="PASS" starttime="20231119 15:43:57.271" endtime="20231119 15:43:57.355"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:02.357" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:43:57.356" endtime="20231119 15:44:02.357"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:02.358" endtime="20231119 15:44:02.367"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:02.367" endtime="20231119 15:44:02.375"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:44:02.376" endtime="20231119 15:44:02.389"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:02.403" level="INFO">${new_text} = 18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:02.390" endtime="20231119 15:44:02.404"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:44:02.404" level="INFO">18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:02.404" endtime="20231119 15:44:02.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:04.405" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:02.405" endtime="20231119 15:44:04.405"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:06.407" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:04.406" endtime="20231119 15:44:06.407"/>
+</kw>
+<status status="PASS" starttime="20231119 15:43:57.142" endtime="20231119 15:44:06.408"/>
+</test>
+<test id="s1-t17" name="ทดสอบการ login ที่ผ่าน และชำระค่าไฟที่ผ่าน (Try Bill Payment with selection water charge with 18446744073709551615)" line="491">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:44:06.413" endtime="20231119 15:44:06.711"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:08.713" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:06.712" endtime="20231119 15:44:08.713"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:08.715" endtime="20231119 15:44:08.728"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:08.746" level="INFO">${initial_text} = 18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:08.729" endtime="20231119 15:44:08.746"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:44:08.747" level="INFO">18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:08.746" endtime="20231119 15:44:08.747"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:44:08.747" endtime="20231119 15:44:09.028"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:11.030" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:09.029" endtime="20231119 15:44:11.030"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:11.032" endtime="20231119 15:44:11.048"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:44:11.049" endtime="20231119 15:44:11.077"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:13.078" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:11.078" endtime="20231119 15:44:13.078"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:44:13.079" endtime="20231119 15:44:13.098"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b2']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:13.099" level="INFO">Clicking element 'xpath=//input[@cid='b2']'.</msg>
+<status status="PASS" starttime="20231119 15:44:13.099" endtime="20231119 15:44:13.180"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:15.182" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:13.181" endtime="20231119 15:44:15.182"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>18446744073709551615</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:15.183" level="INFO">Typing text '18446744073709551615' into text field 'xpath=//input[@cid='b4']'.</msg>
+<status status="PASS" starttime="20231119 15:44:15.183" endtime="20231119 15:44:15.258"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:15.259" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:44:15.259" endtime="20231119 15:44:15.345"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:20.346" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:15.346" endtime="20231119 15:44:20.346"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:44:20.348" endtime="20231119 15:44:20.625"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:20.627" endtime="20231119 15:44:20.638"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:44:20.639" endtime="20231119 15:44:20.652"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:20.666" level="INFO">${new_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:44:20.652" endtime="20231119 15:44:20.666"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:44:20.667" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:44:20.666" endtime="20231119 15:44:20.667"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${initial_text_integer}</var>
+<arg>${initial_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:44:20.668" level="INFO">${initial_text_integer} = 18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:20.667" endtime="20231119 15:44:20.668"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${expected_text_integer}</var>
+<arg>${initial_text_integer}-18446744073709551615</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231119 15:44:20.669" level="INFO">${expected_text_integer} = 385</msg>
+<status status="PASS" starttime="20231119 15:44:20.668" endtime="20231119 15:44:20.669"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${new_text_integer}</var>
+<arg>${new_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:44:20.670" level="INFO">${new_text_integer} = 0</msg>
+<status status="PASS" starttime="20231119 15:44:20.670" endtime="20231119 15:44:20.670"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${new_text_integer}</arg>
+<arg>${expected_text_integer}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20231119 15:44:20.671" level="FAIL">0 != 385</msg>
+<status status="FAIL" starttime="20231119 15:44:20.671" endtime="20231119 15:44:20.671"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231119 15:44:20.672" endtime="20231119 15:44:20.672"/>
+</kw>
+<tag>bill_pay_11</tag>
+<status status="FAIL" starttime="20231119 15:44:06.411" endtime="20231119 15:44:20.672">0 != 385</status>
+</test>
+<test id="s1-t18" name="Set Pre-Condition: Get Balance and Set Balance = 0" line="540">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:20.674" endtime="20231119 15:44:20.691"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:44:20.691" endtime="20231119 15:44:20.776"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:20.777" endtime="20231119 15:44:20.786"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:44:20.787" endtime="20231119 15:44:20.800"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:20.815" level="INFO">${initial_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:44:20.801" endtime="20231119 15:44:20.815"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:44:20.816" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:44:20.816" endtime="20231119 15:44:20.816"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${initial_integer}</var>
+<arg>${initial_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:44:20.817" level="INFO">${initial_integer} = 0</msg>
+<status status="PASS" starttime="20231119 15:44:20.817" endtime="20231119 15:44:20.817"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${initial_integer} &gt; 0</arg>
+<arg>Input Text</arg>
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>${initial_integer}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231119 15:44:20.818" endtime="20231119 15:44:20.818"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:22.820" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:20.819" endtime="20231119 15:44:22.820"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${initial_integer} &gt; 0</arg>
+<arg>Click Button</arg>
+<arg>xpath=//button[@cid='wc']</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20231119 15:44:22.822" endtime="20231119 15:44:22.823"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:27.824" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:22.824" endtime="20231119 15:44:27.824"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='w1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:27.825" endtime="20231119 15:44:27.836"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:27.837" endtime="20231119 15:44:27.846"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:44:27.846" endtime="20231119 15:44:27.862"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:27.876" level="INFO">${new_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:44:27.862" endtime="20231119 15:44:27.876"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:44:27.877" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:44:27.876" endtime="20231119 15:44:27.877"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:29.879" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:27.877" endtime="20231119 15:44:29.879"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${new_text}</arg>
+<arg>0</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20231119 15:44:29.880" endtime="20231119 15:44:29.880"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:31.882" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:29.881" endtime="20231119 15:44:31.882"/>
+</kw>
+<status status="PASS" starttime="20231119 15:44:20.674" endtime="20231119 15:44:31.883"/>
+</test>
+<test id="s1-t19" name="ทดสอบการ login ที่ผ่าน และฝากเงินที่ผ่าน (Try Deposit With Max Bigint : 18446744073709551615)" line="577">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:31.886" endtime="20231119 15:44:31.894"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:44:31.894" endtime="20231119 15:44:31.925"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:31.943" level="INFO">${initial_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:44:31.926" endtime="20231119 15:44:31.944"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:44:31.945" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:44:31.944" endtime="20231119 15:44:31.945"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>18446744073709551615</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:31.946" level="INFO">Typing text '18446744073709551615' into text field 'xpath=//input[@cid='d1']'.</msg>
+<status status="PASS" starttime="20231119 15:44:31.945" endtime="20231119 15:44:32.023"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='dc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:32.024" level="INFO">Clicking button 'xpath=//button[@cid='dc']'.</msg>
+<status status="PASS" starttime="20231119 15:44:32.024" endtime="20231119 15:44:32.112"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:37.113" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:32.113" endtime="20231119 15:44:37.113"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='d1']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:37.114" endtime="20231119 15:44:37.122"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:37.123" endtime="20231119 15:44:37.163"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:44:37.165" endtime="20231119 15:44:37.182"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:37.195" level="INFO">${new_text} = 18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:37.182" endtime="20231119 15:44:37.195"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:44:37.196" level="INFO">18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:37.196" endtime="20231119 15:44:37.197"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:39.199" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:37.197" endtime="20231119 15:44:39.199"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:41.202" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:39.201" endtime="20231119 15:44:41.202"/>
+</kw>
+<status status="PASS" starttime="20231119 15:44:31.885" endtime="20231119 15:44:41.204"/>
+</test>
+<test id="s1-t20" name="ทดสอบการ login ที่ผ่าน และชำระค่าโทรศัพท์ที่ผ่าน (Try Bill Payment with selection water charge with 18446744073709551615)" line="609">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[6]/div[2]/form/button</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:44:41.209" endtime="20231119 15:44:41.503"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:43.506" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:41.505" endtime="20231119 15:44:43.506"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:43.507" endtime="20231119 15:44:43.519"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${initial_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:43.537" level="INFO">${initial_text} = 18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:43.520" endtime="20231119 15:44:43.537"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${initial_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:44:43.538" level="INFO">18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:43.537" endtime="20231119 15:44:43.538"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:44:43.538" endtime="20231119 15:44:43.818"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:45.820" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:43.819" endtime="20231119 15:44:45.820"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:45.822" endtime="20231119 15:44:45.834"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231119 15:44:45.835" endtime="20231119 15:44:45.862"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:47.863" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:45.863" endtime="20231119 15:44:47.863"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b1'][@required]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:44:47.865" endtime="20231119 15:44:47.884"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b3']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:47.885" level="INFO">Clicking element 'xpath=//input[@cid='b3']'.</msg>
+<status status="PASS" starttime="20231119 15:44:47.885" endtime="20231119 15:44:47.957"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:49.958" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:47.958" endtime="20231119 15:44:49.958"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>xpath=//input[@cid='b4']</arg>
+<arg>18446744073709551615</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:49.961" level="INFO">Typing text '18446744073709551615' into text field 'xpath=//input[@cid='b4']'.</msg>
+<status status="PASS" starttime="20231119 15:44:49.960" endtime="20231119 15:44:50.034"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath=//button[@cid='bc']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:50.035" level="INFO">Clicking button 'xpath=//button[@cid='bc']'.</msg>
+<status status="PASS" starttime="20231119 15:44:50.034" endtime="20231119 15:44:50.109"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time_mid}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231119 15:44:55.112" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231119 15:44:50.111" endtime="20231119 15:44:55.112"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231119 15:44:55.114" endtime="20231119 15:44:55.395"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20231119 15:44:55.396" endtime="20231119 15:44:55.405"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231119 15:44:55.405" endtime="20231119 15:44:55.419"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${new_text}</var>
+<arg>xpath=//*[@id="root"]/div/div/div/div[2]/article/h1[3]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20231119 15:44:55.433" level="INFO">${new_text} = 0</msg>
+<status status="PASS" starttime="20231119 15:44:55.420" endtime="20231119 15:44:55.433"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${new_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231119 15:44:55.434" level="INFO">0</msg>
+<status status="PASS" starttime="20231119 15:44:55.434" endtime="20231119 15:44:55.434"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${initial_text_integer}</var>
+<arg>${initial_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:44:55.435" level="INFO">${initial_text_integer} = 18446744073709552000</msg>
+<status status="PASS" starttime="20231119 15:44:55.435" endtime="20231119 15:44:55.435"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${expected_text_integer}</var>
+<arg>${initial_text_integer}-18446744073709551615</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20231119 15:44:55.436" level="INFO">${expected_text_integer} = 385</msg>
+<status status="PASS" starttime="20231119 15:44:55.435" endtime="20231119 15:44:55.436"/>
+</kw>
+<kw name="Convert To Integer" library="BuiltIn">
+<var>${new_text_integer}</var>
+<arg>${new_text}</arg>
+<doc>Converts the given item to an integer number.</doc>
+<msg timestamp="20231119 15:44:55.436" level="INFO">${new_text_integer} = 0</msg>
+<status status="PASS" starttime="20231119 15:44:55.436" endtime="20231119 15:44:55.437"/>
+</kw>
+<kw name="Should Be Equal As Integers" library="BuiltIn">
+<arg>${new_text_integer}</arg>
+<arg>${expected_text_integer}</arg>
+<doc>Fails if objects are unequal after converting them to integers.</doc>
+<msg timestamp="20231119 15:44:55.437" level="FAIL">0 != 385</msg>
+<status status="FAIL" starttime="20231119 15:44:55.437" endtime="20231119 15:44:55.438"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>${wait_time}</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231119 15:44:55.438" endtime="20231119 15:44:55.438"/>
+</kw>
+<tag>bill_pay_11</tag>
+<status status="FAIL" starttime="20231119 15:44:41.207" endtime="20231119 15:44:55.438">0 != 385</status>
+</test>
+<status status="FAIL" starttime="20231119 15:41:17.444" endtime="20231119 15:44:55.440"/>
+</suite>
+<statistics>
+<total>
+<stat pass="17" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">bill_pay_1</stat>
+<stat pass="1" fail="0" skip="0">bill_pay_10</stat>
+<stat pass="1" fail="3" skip="0">bill_pay_11</stat>
+<stat pass="1" fail="0" skip="0">bill_pay_2</stat>
+<stat pass="1" fail="0" skip="0">bill_pay_3</stat>
+<stat pass="1" fail="0" skip="0">bill_pay_4</stat>
+<stat pass="1" fail="0" skip="0">bill_pay_5</stat>
+<stat pass="1" fail="0" skip="0">bill_pay_6</stat>
+<stat pass="1" fail="0" skip="0">bill_pay_7</stat>
+<stat pass="1" fail="0" skip="0">bill_pay_8</stat>
+<stat pass="1" fail="0" skip="0">bill_pay_9</stat>
+</tag>
+<suite>
+<stat pass="17" fail="3" skip="0" id="s1" name="6 Cu Bank Bill Payment Module">6 Cu Bank Bill Payment Module</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231119 15:43:11.021" level="WARN">Multiple tests with name 'Set Pre-Condition: Get Balance and Set Balance = 0' executed in suite '6 Cu Bank Bill Payment Module'.</msg>
+<msg timestamp="20231119 15:43:45.979" level="WARN">Multiple tests with name 'Set Pre-Condition: Get Balance and Set Balance = 0' executed in suite '6 Cu Bank Bill Payment Module'.</msg>
+<msg timestamp="20231119 15:43:57.141" level="WARN">Multiple tests with name 'ทดสอบการ login ที่ผ่าน และฝากเงินที่ผ่าน (Try Deposit With Max Bigint : 18446744073709551615)' executed in suite '6 Cu Bank Bill Payment Module'.</msg>
+<msg timestamp="20231119 15:44:20.673" level="WARN">Multiple tests with name 'Set Pre-Condition: Get Balance and Set Balance = 0' executed in suite '6 Cu Bank Bill Payment Module'.</msg>
+<msg timestamp="20231119 15:44:31.884" level="WARN">Multiple tests with name 'ทดสอบการ login ที่ผ่าน และฝากเงินที่ผ่าน (Try Deposit With Max Bigint : 18446744073709551615)' executed in suite '6 Cu Bank Bill Payment Module'.</msg>
+</errors>
+</robot>
